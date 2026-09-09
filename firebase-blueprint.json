@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "DayInform": {
+      "collection": "informs",
+      "description": "일자별 교대 정비 인폼 시트 정보",
+      "fields": {
+        "date": { "type": "string", "required": true, "description": "YYYY-MM-DD 형식의 일자" },
+        "title": { "type": "string", "description": "인폼 제목" },
+        "author": { "type": "string", "required": true, "description": "작성자/담당 엔지니어" },
+        "activeShift": { "type": "string", "required": true, "description": "근무 교대조 (DAY, SW, GY)" },
+        "status": { "type": "string", "required": true, "description": "진행 상태 (작성 중, 완료됨, 이슈 있음, 승인됨)" },
+        "issueCount": { "type": "number", "description": "발생 이슈 건수" },
+        "completionRate": { "type": "number", "description": "작업 완료율 (%)" },
+        "summary": { "type": "string", "description": "요약 내용" },
+        "records": { "type": "array", "description": "정비 상세 내역 목록" },
+        "lastSaved": { "type": "string", "required": true, "description": "최종 저장 일시 (YYYY-MM-DD HH:mm:ss)" }
+      }
+    },
+    "MaintenanceRecord": {
+      "collection": "maintenance_records",
+      "description": "개별 설비 정비 예약 및 작업 기록",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "date": { "type": "string", "required": true },
+        "shift": { "type": "string", "required": true },
+        "equipmentId": { "type": "string", "required": true },
+        "workDescription": { "type": "string", "required": true },
+        "workStatus": { "type": "string", "required": true, "description": "작업 상태 (작성 중, 완료됨)" },
+        "status": { "type": "string", "description": "정비 상태" },
+        "author": { "type": "string" },
+        "remarks": { "type": "string" },
+        "attachments": { "type": "array" },
+        "savedAt": { "type": "string", "required": true, "description": "저장 시점" }
+      }
+    }
+  }
+}

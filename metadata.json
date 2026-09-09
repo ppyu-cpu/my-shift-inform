@@ -1,0 +1,6 @@
+{
+  "name": "MaintIntel Pro - 유지보수 인폼 시스템",
+  "description": "일자별 인폼 허브, 실시간 정비 인폼 스프레드시트, 버전 복구 및 과거 데이터 통합 검색을 지원하는 설비 유지보수 시스템",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
